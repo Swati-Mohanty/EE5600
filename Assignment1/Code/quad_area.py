@@ -1,3 +1,4 @@
+
 import numpy as np
 
 
@@ -11,6 +12,10 @@ D = np.array([-1,-0.5,4])
 AD = np.linalg.norm(A-D)
 BA = np.linalg.norm(B-A)
 
-#Area= cross product of adjacent sides
+#Area= product of adjacent sides
 area = AD*BA
 print("Area of rectangle=",area)
+
+#Cross product
+ar = np.linalg.norm(np.cross(A-D,B-A))
+print("Cross product area=",ar)
