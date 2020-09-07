@@ -1,6 +1,15 @@
 
 import numpy as np
 
+def skew(vector):
+
+    if isinstance(vector, np.ndarray):
+        vector = vector.tolist()
+
+    return np.array([[0, -vector[2], vector[1]],
+                     [vector[2], 0, -vector[0]],
+                     [-vector[1], vector[0], 0]])
+
 
 #Line points
 A = np.array([-1,0.5,4])
@@ -19,3 +28,10 @@ print("Area of rectangle=",area)
 #Cross product
 ar = np.linalg.norm(np.cross(A-D,B-A))
 print("Cross product area=",ar)
+
+#Skew symmetric matrix multiplication
+#print(A-D)
+Y = skew(A-D)
+#print("Skew symmetric matrix :", Y)
+area = np.linalg.norm(np.cross(Y,B-A))
+print("Area of rectangle =" ,area)
