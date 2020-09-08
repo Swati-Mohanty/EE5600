@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{physics}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\title{Assignment 1
+\\Linear Algebra }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{September 2020}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+Find the area of a rectangle $ABCD$ with vertices $A$ = \myvec{-1 \\\frac{1}{2} \\4} , $B$ = \myvec{1 \\\frac{1}{2} \\4}, $C$ = \myvec{1 \\-\frac{1}{2} \\4}, $D$ = \myvec{-1 \\-\frac{1}{2} \\4}.
+\section{Solution}
+Method 1: The adjacent sides of the rectangle are BA and AD (i.e. length and breadth). Area of a rectangle = length * breadth = AD*BA.
+\\AD = $\Vec{A-D}$
+\\=\myvec{-1 \\\frac{1}{2} \\4} - \myvec{-1 \\-\frac{1}{2} \\4} = 1
+\\Similarly, BA =  $\vec{B-A}$   = 2. Thus, area = 1*2 = 2 sq.units
+\\
+\\Method 2: Area of rectangle = cross product of vectors of adjacent sides
+\\Side $\vec{AD}$ = $\vec{A}$ - $\vec{D}$ = \myvec{0 \\-1 \\0}  Side $\vec{BA}$  = $\vec{B}$ - $\vec{A}$ = \myvec{2 \\0 \\0}
+\\Area = $\vec{AD} $  X  $\vec{BA} $  = \myvec{0 \\-1 \\0}  X \myvec{2 \\0 \\0}
+\\=\myvec{0&-0&1 \\0&0&0 \\-1&0&0}X\myvec{2 \\0 \\0} = 2
+\\
+\\Python code link 
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/EE5600/blob/master/
+Assignment1/Code/quad_area.py
+\end{lstlisting}
+\end{document}
