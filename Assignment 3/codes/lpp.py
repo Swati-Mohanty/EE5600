@@ -77,3 +77,4 @@ plt.xlabel(r'$x$')
 plt.ylabel(r'$y$')
 
 plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+plt.grid()
