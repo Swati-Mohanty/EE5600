@@ -13,6 +13,7 @@
    \begin{tikzpicture}
      \node[draw,circle,inner sep=1pt,color=black ] {#1};
    \end{tikzpicture}}
+\renewcommand{\thefigure}{\theenumi}
    
 \title{Assignment 3
 \\Linear Programming }
@@ -71,8 +72,14 @@ Solving for Z by this reduction method we get
     Max Z = 400 
     \\Min Z = 100
 \end{align}
-This can be solved in Python which generates the result as below: 
-\\\includegraphics[width=10cm, height=5cm]{plot.jpg}
-The following python code generates the maxima and minima values
-\\Link : https://github.com/Swati-Mohanty/EE5600/blob/master/Assignment%203/codes/lpp.py
+This can be solved in Python which generates the result as shown in Fig 1. 
+\begin{figure}[h]
+\renewcommand{\theenumi}{1}
+\centering
+\includegraphics[width=\columnwidth]{plot.png}
+\caption{Plot from python code with Maxima and Minima points}
+\label{Fig:1}
+\end{figure}
+\\The following python code generates the maxima and minima values
+\\Link : https://github.com/Swati-Mohanty/EE5600/blob/master/Assignment_3/codes/lpp.py 
 \end{document}
